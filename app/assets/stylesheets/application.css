@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+/*      Letter formatting info start      */
+
+@media print {
+  .bad {
+    display: none;
+  }
+  
+  .links {
+    display: none;
+  }
+
+  div.letterContainer {
+    display: block;
+  }
+}
+
+.letterContainer{
+ width:480px; 
+ margin:0 auto;
+ margin-top:20px;
+ font-family:serif, sans-serif;
+ padding-bottom:30px;
+ padding-top:30px;
+}
+
+.letterFormatTitle{
+ margin-top:60px;
+ margin-left:130px;
+}
+
+.companyInfoContainer{
+ text-align:right;
+ width:500px;
+ height:80px;
+}
+
+.companyInfoBox{
+ text-align:left;
+ width:210px;
+ float:right;
+}
+
+.signOffContainer{
+ width:500px;
+ height:120px;    
+}
+
+.signOffBox{
+ text-align:left;
+ float:right;
+ width:210px;
+}
+
+.bodyParagraphContainer p{
+ text-indent:40px;   
+}

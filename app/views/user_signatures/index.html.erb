@@ -1,0 +1,31 @@
+<h1>Listing user_signatures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Signature</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_signatures.each do |user_signature| %>
+      <tr>
+        <td><%= user_signature.name %></td>
+        <td><%= user_signature.description %></td>
+        <td><%= user_signature.signature %></td>
+        <td><%= link_to 'Show', user_signature %></td>
+        <td><%= link_to 'Edit', edit_user_signature_path(user_signature) %></td>
+        <td><%= link_to 'Destroy', user_signature, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User signature', new_user_signature_path %>

@@ -1,0 +1,52 @@
+<div class="bad">  
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Name:</strong>
+    <%= @user_signature.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @user_signature.description %>
+  </p>
+
+  <p>
+    <strong>Signature:</strong>
+    <%= @user_signature.signature %>
+  </p>
+</div>
+<div class="letterContainer">
+  <div class="companyInfoContainer">
+      <div class="companyInfoBox">
+          <p><strong>Company Name <br> Company Address</strong> <br> Date of Letter</p>
+      </div>
+  </div>
+
+  <div class="RecipientInfoBox">
+      <p>Recipient's name <br> Recipient's title <br> Recipient's company <br> Recipient's company address
+      <br><br>Recipient's Name:</p>
+  </div>
+
+  <div class="bodyParagraphContainer">
+      <p>People read business letters quickly. Therefore, get to the point in the first paragraph--the first sentence, if possible. In other words, state what you want up front.</p>
+      <p>Single space your letters and use a serif typeface. Skip a line between paragraphs. Because people read business letters quickly, use shorter sentences and paragraphs than you would in a longer document. Sentences should average fewer than twenty words, and paragraphs should average fewer than seven lines. </p>
+      <p>Space your letter on the page so that it does not crowd the top. However, if possible, keep your letter to one page. Second pages often are not read. Send copies to anyone whose name you mention in the letter or who would be directly affected by the letter. </p>
+      <p>Final paragraphs should tell readers what you want them to do or what you will do for them. </p>
+  </div>
+  <div class="signOffContainer">
+      <div class="signOffBox">
+          <p>Sincerely,
+            <br><br>
+            <div id='signature'></div>
+            <br><br>
+          </p>
+      </div>
+  </div>
+  <p>Enclosure <br><br> cc: Name to receive copy</p>
+</div>
+
+<div class='links'>
+  <%= link_to 'Edit', edit_user_signature_path(@user_signature) %> |
+  <%= link_to 'Back', user_signatures_path %>
+</div>

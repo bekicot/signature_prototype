@@ -1,0 +1,34 @@
+<%= form_for(@user_signature) do |f| %>
+  <% if @user_signature.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_signature.errors.count, "error") %> prohibited this user_signature from being saved:</h2>
+
+      <ul>
+      <% @user_signature.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :signature %><br>
+    <%= f.text_field :signature %>
+  </div>
+  <div style="max-width: 500px">
+  <div id="signature">
+    
+  </div>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
